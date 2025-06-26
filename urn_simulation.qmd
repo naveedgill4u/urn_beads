@@ -1,6 +1,7 @@
 ---
 title: "Proportion of red beads"
 format: html
+
 library(tidymodels)
 library(broom)
 ---
