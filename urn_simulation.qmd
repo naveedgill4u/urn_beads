@@ -2,14 +2,15 @@
 title: "Proportion of red beads"
 format: html
 
-library(tidymodels)
-library(broom)
+
 ---
 
 
 
 ```{r}
----
+library(tidymodels)
+library(broom)
+
 title: "Distribution of Ball Colors in the Urn"
 format: html
 editor: visual
