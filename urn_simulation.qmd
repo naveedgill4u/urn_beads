@@ -1,0 +1,46 @@
+---
+title: "Proportion of red beads"
+format: html
+library(tidymodels)
+library(broom)
+---
+
+
+
+```{r}
+---
+title: "Distribution of Ball Colors in the Urn"
+format: html
+editor: visual
+---
+
+## Exploring the Urn
+
+This chart shows how often each color appears in the urn.
+
+```{r}
+library(tidyverse)
+
+# Create example urn data if not already defined
+urn <- tibble(
+  color = sample(c("red", "blue"), size = 1000, replace = TRUE, prob = c(0.3, 0.7))
+)
+
+# Plot
+ggplot(urn, aes(x = color, fill = color)) +
+  geom_bar(width = 0.6, alpha = 0.9, color = "black") +
+  labs(
+    title = "Frequency of Red and Blue Balls in the Urn",
+    subtitle = "Blue balls are more common in this simulated urn sample",
+    x = "Ball Color",
+    y = "Count",
+    caption = "Simulated Data for Demonstration"
+  ) +
+  scale_fill_manual(values = c("red" = "#e74c3c", "blue" = "#3498db")) +
+  theme_minimal(base_size = 15) +
+  theme(
+    plot.title = element_text(face = "bold", size = 18),
+    plot.subtitle = element_text(size = 14),
+    legend.position = "none"
+  )
+```
